@@ -25,7 +25,7 @@ namespace EngineerMachine
       services.AddMvc();
 
       services.AddEntityFrameworkMySql()
-        .AddDbContext<EngineerMachineContext>(options => options
+        .AddDbContext<FactoryContext>(options => options
         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
     }
 
