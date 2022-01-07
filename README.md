@@ -25,7 +25,7 @@ This application keeps track of a factory's engineers and the machines they are 
 * Click on the green "Code" button and copy the repository URL.
 * Open your terminal and navigate to the location where you would like to clone the application.
 * Use the command _git clone https://github.com/karenaxon/Factory.git_ to clone the repository.
-* From the root directory of the application, the Factory folder, run the following commands:
+* From **the root directory of the application, the Factory folder**, run the following commands:
   - _dotnet restore_
   - _dotnet add package Microsoft.EntityFrameworkCore -v 5.0.0_ 
   - _dotnet add package Pomelo.EntityFrameworkCore.MySql -v 5.0.0-alpha.2_
@@ -44,8 +44,18 @@ This application keeps track of a factory's engineers and the machines they are 
 ![Alt text](Factory/wwwroot/Images/db_schema.jpg?raw=true "Title")
 
 After following the Setup/Installation steps above:
-* Start a local instance 3306 in MySQL Workbench.
-* In the terminal, navigate to the root directory of the application and create an _appsettings.json_ file with the following code (making sure to delete the [ ] and replace the name of the database and the corresponding password):
+
+**In MySQL Workbench**
+* Start a local instance 3306.
+* In the Navigator > Administration tab select Data Import/Restore.
+* In Import Options select Import from Self-Contained File.
+* Navigate to the application and locate the database dump file(.sql).
+* Click Ok.
+* Navigate to the tab called Import Progress and click Start Import at the bottom right corner of the window.
+* In the Navigator > Schemas tab, right click and select Refresh All.
+  
+**In the terminal**
+* Navigate to the root directory of the application and create an _appsettings.json_ file with the following code (making sure to delete the [ ] and replace the name of the database and the corresponding password):
 ```
 {
   "ConnectionStrings": {
@@ -53,7 +63,7 @@ After following the Setup/Installation steps above:
   }
 }
 ```
-* Run these commands in the root directory:
+* In the root directory run these commands:
   - dotnet ef migrations add Initial
   - dotnet ef database update
 
