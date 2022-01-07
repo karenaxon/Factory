@@ -41,7 +41,7 @@ This application keeps track of a factory's engineers and the machines they are 
 
 ## Setting up the database
 
-![Alt text](HairSalon/wwwroot/images/hair_salon_schema.jpg?raw=true "Title")
+![Alt text](Factory/wwwroot/Images/db_schema.jpg?raw=true "Title")
 
 After following the Setup/Installation steps above:
 * Start a local instance 3306 in MySQL Workbench.
