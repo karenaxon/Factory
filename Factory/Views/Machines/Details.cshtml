@@ -14,7 +14,7 @@
 }
 else
 {
-  <h4>The following engineer(s) specializes on fixing this machine:</h4>
+  <h4 class="mt-4">The following engineers specialize on fixing this machine:</h4>
   <ul>
   @foreach(var join in Model.JoinEntities)
   {
@@ -25,3 +25,4 @@ else
 
 <p class="h5 mt-5">@Html.ActionLink("Edit this machine", "Edit", new { id = Model.MachineId })</p>
 <p class="h5">@Html.ActionLink("Delete this Machine", "Delete", new { id = Model.MachineId })</p>
+<p class="h5">@Html.ActionLink("Add an engineer", "AddEngineer", new { id = Model.MachineId })</p>
