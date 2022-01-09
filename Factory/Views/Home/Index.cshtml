@@ -2,6 +2,15 @@
   Layout = "_Layout";
 }
 
-<h1 class="mt-4 mb-4 text-center">Welcome to Factory Website!</h1>
-<p class="h5 mt-5">@Html.ActionLink("See all machines", "Index", "machines")</p> 
-<p class="h5">@Html.ActionLink("See all engineers", "Index", "engineers")</p>
+<h1 class="mt-4 mb-4 text-center">Welcome to Dr. Sillystringz's Factory</h1>
+<hr />
+
+<div class="row justify-content-center">
+  <div class="col-4">
+    <p class="h4">@Html.ActionLink("See all machines", "Index", "machines")</p>
+  </div>
+  <div class="col-4">
+    <p class="h4">@Html.ActionLink("See all engineers", "Index", "engineers")</p>
+  </div>
+  
+</div>
