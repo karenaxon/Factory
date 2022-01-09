@@ -1,0 +1,27 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+
+<h2>Machine Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.Brand): @Html.DisplayFor(model => model.Brand)</h3>
+
+@if(@Model.JoinEntities.Count == 0)
+{
+  <h5>There isn't an engineer that specializes on fixing this machine yet.</h5>
+}
+else
+{
+  <h4>The following engineer(s) specializes on fixing this machine:</h4>
+  <ul>
+  @foreach(var join in Model.JoinEntities)
+  {
+    <li>@join.Engineer.FirstName @join.Engineer.LastName</li>
+  }
+  </ul>
+}
+
+<p class="h5 mt-5">@Html.ActionLink("Edit this machine", "Edit", new { id = Model.MachineId })</p>
+<p class="h5">@Html.ActionLink("Delete this Machine", "Delete", new { id = Model.MachineId })</p>
