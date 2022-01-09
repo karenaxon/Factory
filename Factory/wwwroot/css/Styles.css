@@ -1,3 +1,7 @@
+body{
+  height: auto;
+}
+
 label {
   padding-right: 6px;
 }
